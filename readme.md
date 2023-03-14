@@ -99,12 +99,12 @@ I will now repeat the questions so you can follow along, the code I wrote to ans
   This query returns a churn rate for customers with partners as 19.7% and those without partners as 32.9%. Based on these numbers, it seems having partners increases customer loyalty.
 
   - Let's look at churn rate by dependents
-  ```SQL
+```SQL
      SELECT dependents, COUNT(*) AS total_customers, COUNT(CASE WHEN churn = 'Yes' THEN 1 ELSE NULL END) AS churned_customers, 
        COUNT(CASE WHEN churn = 'Yes' THEN 1 ELSE NULL END) / CAST(COUNT(*) AS FLOAT) * 100 AS churn_rate
     FROM customers
     GROUP BY dependents;
-  ```
+```
     The churn rate for customers with dependents is 15.5% and those without dependents is 31.2%. Based on these numbers, it seems like customers with dependents are more likely to stay at the company. And those without dependents would leave. I recommend marketing campaigns that are targeted at those customers without dependents.
 ---
 
@@ -115,7 +115,7 @@ I will now repeat the questions so you can follow along, the code I wrote to ans
     FROM customers
     GROUP BY contract;
 ```
-    They are 3 contract types in the dataset. Month-to-month, one year and two year. Customers with a month-to-month contract has a churn rate of 42.7%, customers with a one year contract have a churn rae of 11.2%, customers with a two year contract have a churn rate of 2.8%. Based on these numbers, customers with a longer contract are less likely to churn. Customers with a month-to-month contract are more likely to churn. I recommend to create marketing campaigns that targetted at customers who have a month-to-month contract and encourage them to sign longer contracts. Provide incentives to encourage them to sign longer contracts. Additionally, for future references, for new customers, I would encourage them to sign longer contract before signing on.
+    They are 3 contract types in the dataset. Month-to-month, one year and two year. Customers with a month-to-month contract has a churn rate of 42.7%, customers with a one year contract have a churn rate of 11.2%, customers with a two year contract have a churn rate of 2.8%. Based on these numbers, customers with a longer contract are less likely to churn. Customers with a month-to-month contract are more likely to churn. I recommend to create marketing campaigns that targetted at customers who have a month-to-month contract and encourage them to sign longer contracts. Provide incentives to encourage them to sign longer contracts. Additionally, for future references, for new customers, I would encourage them to sign longer contract before signing on.
 ---
 - How does monthly charges affect churn rate?
 ```SQL
@@ -123,13 +123,13 @@ I will now repeat the questions so you can follow along, the code I wrote to ans
     from customers
     GROUP BY churn;
 ```
-   The average monthly charge for those who churn is $74. And the average charge for those who do not churn is $61.
-   This seems that customers are more likely to churn if they are paying more in monthly charges. To validate the truthfulness of this statement, we will conduct hypothesis testing to test the statistical signifance between churn and monthly charges. We want to make sure that this is not just due to chance and this statistical test will tell us if it is due to chance or if it is not.
-   We will use pearson's correlation statistical test to test this hypothesis using Python.
+* The average monthly charge for those who churn is $74. And the average charge for those who do not churn is $61.
+This seems that customers are more likely to churn if they are paying more in monthly charges. To validate the truthfulness of this statement, we will conduct hypothesis testing to test the statistical signifance between churn and monthly charges. We want to make sure that this is not just due to chance and this statistical test will tell us if it is due to chance or if it is not.
+We will use pearson's correlation statistical test to test this hypothesis using Python. 
 
-    I will provide a brief summary of the test here. You can check the "Corr, Hypoth, Prediction" file to see more details about my hypothesis test. The null hypothesis for this test is: There is no statistical significance between churn and monthly charges. The p value for this test is 6.760843118056653e-60. This is way less than the significance level which is 0.05. Therefore, we can reject the null hypothesis. We can conclude that there is a statistical significance between churn and monthly charges and it's not just due to chance.
+  I will provide a brief summary of the test here. You can check the "Corr, Hypoth, Prediction" file to see more details about my hypothesis test. The null hypothesis for this test is: There is no statistical significance between churn and monthly charges. The p value for this test is 6.760843118056653e-60. This is way less than the significance level which is 0.05. Therefore, we can reject the null hypothesis. We can conclude that there is a statistical significance between churn and monthly charges and it's not just due to chance.
 
-    Based on these results, I recommend revising pricing strategies to ensure the pricing is reasonable for customers. Because customers may be leaving because of high monthly charges. I suggest lowering prices or offering discounts to retain these customers. It wouldn't hurt to improve customer service either to ensure that customer's needs are being met and the pricing matches up with the service being provided.
+  Based on these results, I recommend revising pricing strategies to ensure the pricing is reasonable for customers. Because customers may be leaving because of high monthly charges. I suggest lowering prices or offering discounts to retain these customers. It wouldn't hurt to improve customer service either to ensure that customer's needs are being met and the pricing matches up with the service being provided.
 ---
 - What services are mostly associated with churn?
 
