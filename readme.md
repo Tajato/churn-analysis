@@ -105,7 +105,7 @@ I will now repeat the questions so you can follow along, the code I wrote to ans
     FROM customers
     GROUP BY dependents;
 ```
-    The churn rate for customers with dependents is 15.5% and those without dependents is 31.2%. Based on these numbers, it seems like customers with dependents are more likely to stay at the company. And those without dependents would leave. I recommend marketing campaigns that are targeted at those customers without dependents.
+##### The churn rate for customers with dependents is 15.5% and those without dependents is 31.2%. Based on these numbers, it seems like customers with dependents are more likely to stay at the company. And those without dependents would leave. I recommend marketing campaigns that are targeted at those customers without dependents.
 ---
 
 - How does contract type affect churn rate?
