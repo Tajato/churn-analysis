@@ -115,7 +115,7 @@ I will now repeat the questions so you can follow along, the code I wrote to ans
     FROM customers
     GROUP BY contract;
 ```
-    They are 3 contract types in the dataset. Month-to-month, one year and two year. Customers with a month-to-month contract has a churn rate of 42.7%, customers with a one year contract have a churn rate of 11.2%, customers with a two year contract have a churn rate of 2.8%. Based on these numbers, customers with a longer contract are less likely to churn. Customers with a month-to-month contract are more likely to churn. I recommend to create marketing campaigns that targetted at customers who have a month-to-month contract and encourage them to sign longer contracts. Provide incentives to encourage them to sign longer contracts. Additionally, for future references, for new customers, I would encourage them to sign longer contract before signing on.
+#### They are 3 contract types in the dataset. Month-to-month, one year and two year. Customers with a month-to-month contract has a churn rate of 42.7%, customers with a one year contract have a churn rate of 11.2%, customers with a two year contract have a churn rate of 2.8%. Based on these numbers, customers with a longer contract are less likely to churn. Customers with a month-to-month contract are more likely to churn. I recommend to create marketing campaigns that targetted at customers who have a month-to-month contract and encourage them to sign longer contracts. Provide incentives to encourage them to sign longer contracts. Additionally, for future references, for new customers, I would encourage them to sign longer contract before signing on.
 ---
 - How does monthly charges affect churn rate?
 ```SQL
