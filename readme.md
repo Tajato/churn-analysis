@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** 
+
+- [Introduction](#analyzing--predicting-customer-churn)
+- [Exploratory Data Analysis Questions](#exploratory-data-analysis-questions)
+- [The Code & Recommendations](#findings-insights--recommendations)
+- [Final Words & Recommendations](#final-words--recommendations)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Analyzing & Predicting Customer Churn 
 
 For this project, I am a data analyst at a tech company. My task is to analyze customer churn at the company and see if I could predict customers who have a high potential of churn.
