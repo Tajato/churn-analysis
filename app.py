@@ -39,3 +39,10 @@ st.subheader("Churn Prediction")
 st.metric("Churn Probability", f"{churn_prob:.2%}")
 st.metric("Risk Level", risk_level)
 
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center;'>"
+    "Developed by Tahj Gordon • 2025"
+    "</div>",
+    unsafe_allow_html=True
+)
